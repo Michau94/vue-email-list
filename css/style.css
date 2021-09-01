@@ -31,3 +31,7 @@ body {
 .loader i {
   display: block;
 }
+
+.list ul li {
+  padding: 5px 0;
+}

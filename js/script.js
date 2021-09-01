@@ -5,9 +5,9 @@ const root = new Vue({
     el: '#root',
 
     data: {
-        randomMail: '',
         mailList: [],
-
+        error: false,
+        errorMsg: 'Errore di caricamento...',
     },
     methods: {
         isLoading() {
@@ -15,9 +15,7 @@ const root = new Vue({
             return this.mailList.length < 10;
         }
     },
-
     created() {
-
 
         for (let i = 0; i < 10; i++) {
 
@@ -26,9 +24,12 @@ const root = new Vue({
                     let response = res.data.response
 
                     this.mailList.push(response)
-                })
+                }).catch((err) => {
+                    this.error = true;
+                    console.log(err)
+                }
+                )
         }
-
         console.log(this.mailList);
 
     }

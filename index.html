@@ -26,6 +26,7 @@
         <h1 class="text-center">Email Casuali</h1>
         <div v-if="isLoading()" class="loader text-center">
             <i class="fas fa-spinner fa-spin fa-2x"></i>
+            <div v-if="error">{{ errorMsg }}</div>
         </div>
         <div v-else class="list">
             <ul class="text-center">
