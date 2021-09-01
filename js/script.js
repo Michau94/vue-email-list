@@ -6,9 +6,16 @@ const root = new Vue({
 
     data: {
         randomMail: '',
-        mailList: []
+        mailList: [],
+
     },
-    methods: {},
+    methods: {
+        isLoading() {
+
+            return this.mailList.length < 10;
+        }
+    },
+
     created() {
 
 
@@ -19,10 +26,7 @@ const root = new Vue({
                     let response = res.data.response
 
                     this.mailList.push(response)
-
-
                 })
-
         }
 
         console.log(this.mailList);
