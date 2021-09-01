@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue-Mail-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js'
         integrity='sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=='
@@ -19,26 +22,16 @@
 <body>
 
     <div id="root">
-        <h1>Email Casuali</h1>
-        <div v-if="isLoading()">
 
+        <h1 class="text-center">Email Casuali</h1>
+        <div v-if="isLoading()" class="loader text-center">
             <i class="fas fa-spinner fa-spin fa-2x"></i>
-
-
-
         </div>
-
-
-        <div v-else>
-            <ul>
+        <div v-else class="list">
+            <ul class="text-center">
                 <li v-for="mail in mailList"> {{ mail }}</li>
             </ul>
         </div>
-
-
-
-
-
     </div>
 
 

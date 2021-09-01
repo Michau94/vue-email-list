@@ -1,1 +1,33 @@
-/* * Reset * */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* UTILS */
+.text-center {
+  text-align: center;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#root {
+  padding: 15px;
+  height: 100vh;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 46px);
+}
+
+.loader i {
+  display: block;
+}
